@@ -1,22 +1,19 @@
 // Register ScrollTrigger
 gsap.registerPlugin(ScrollTrigger);
 
-// Create floating shapes
+// Function to create floating shapes dynamically
 const createShapes = () => {
     const hero = document.querySelector('.hero');
     for (let i = 0; i < 20; i++) {
         const shape = document.createElement('div');
         shape.className = 'shape';
-        // Randomize size between 30 and 80 pixels
         const size = Math.random() * 50 + 30;
         shape.style.width = `${size}px`;
         shape.style.height = `${size}px`;
-        // Initial position
         shape.style.left = `${Math.random() * 100}%`;
         shape.style.top = `${Math.random() * 100}%`;
         hero.appendChild(shape);
 
-        // Create smooth, continuous floating animation for each shape
         gsap.to(shape, {
             x: `+=${Math.random() * 100 - 50}`,
             y: `+=${Math.random() * 100 - 50}`,
@@ -25,156 +22,48 @@ const createShapes = () => {
             yoyo: true,
             ease: "sine.inOut"
         });
-
-        // Add click interaction
-        shape.addEventListener('click', (e) => {
-            // Stop propagation to prevent multiple shapes from being affected
-            e.stopPropagation();
-            
-            // Create ripple effect
-            gsap.to(shape, {
-                scale: 1.5,
-                opacity: 0.2,
-                duration: 0.5,
-                ease: "power2.out",
-                onComplete: () => {
-                    gsap.to(shape, {
-                        scale: 1,
-                        opacity: 0.1,
-                        duration: 0.5,
-                        ease: "power2.in"
-                    });
-                }
-            });
-
-            // Affect nearby shapes
-            const shapes = document.querySelectorAll('.shape');
-            shapes.forEach(otherShape => {
-                if (otherShape !== shape) {
-                    const rect1 = shape.getBoundingClientRect();
-                    const rect2 = otherShape.getBoundingClientRect();
-                    
-                    // Calculate distance between shapes
-                    const distance = Math.hypot(
-                        rect1.left - rect2.left,
-                        rect1.top - rect2.top
-                    );
-
-                    // Only affect shapes within 200px
-                    if (distance < 200) {
-                        const scale = 1 + (200 - distance) / 200;
-                        gsap.to(otherShape, {
-                            scale: scale,
-                            opacity: 0.15,
-                            duration: 0.3,
-                            ease: "power2.out",
-                            onComplete: () => {
-                                gsap.to(otherShape, {
-                                    scale: 1,
-                                    opacity: 0.1,
-                                    duration: 0.3,
-                                    ease: "power2.in"
-                                });
-                            }
-                        });
-                    }
-                }
-            });
-        });
     }
 };
 
-// Add click interaction to the hero section
-document.querySelector('.hero').addEventListener('click', (e) => {
-    // Only trigger if clicking directly on the hero (not on a shape)
-    if (e.target.classList.contains('hero')) {
-        const shapes = document.querySelectorAll('.shape');
-        const clickX = e.clientX;
-        const clickY = e.clientY;
-
-        shapes.forEach(shape => {
-            const rect = shape.getBoundingClientRect();
-            const shapeX = rect.left + rect.width / 2;
-            const shapeY = rect.top + rect.height / 2;
-            
-            // Calculate distance from click
-            const distance = Math.hypot(clickX - shapeX, clickY - shapeY);
-            
-            // Affect shapes based on distance
-            if (distance < 300) {
-                const scale = 1 + (300 - distance) / 300;
-                const delay = distance / 1000; // Ripple effect delay
-                
-                gsap.to(shape, {
-                    scale: scale,
-                    opacity: 0.2,
-                    duration: 0.5,
-                    delay: delay,
-                    ease: "power2.out",
-                    onComplete: () => {
-                        gsap.to(shape, {
-                            scale: 1,
-                            opacity: 0.1,
-                            duration: 0.5,
-                            ease: "power2.in"
-                        });
-                    }
-                });
-            }
-        });
-    }
-});
-
-// Initialize shapes
+// Initialize floating shapes
 createShapes();
 
-// Initial animation when page loads
-gsap.to('.hero-title', {
-    opacity: 1,
-    y: 0,
-    duration: 1,
-    ease: "power3.out"
-});
+// Initial hero section animation
+const heroAnimations = () => {
+    gsap.to('.hero-title', { opacity: 1, y: 0, duration: 1, ease: "power3.out" });
+    gsap.to('.hero-subtitle', { opacity: 1, y: 0, duration: 1, delay: 0.3, ease: "power3.out" });
+};
 
-gsap.to('.hero-subtitle', {
-    opacity: 1,
-    y: 0,
-    duration: 1,
-    delay: 0.3,
-    ease: "power3.out"
-});
+heroAnimations();
 
-// Horizontal showcase scroll animation
-const showcaseTrack = document.querySelector('.showcase-track');
-const showcaseWidth = showcaseTrack.offsetWidth;
-const translateX = showcaseWidth - window.innerWidth;
+// Showcase animations with a more dynamic motion
+const showcaseMotion = () => {
+    gsap.utils.toArray('.showcase-item').forEach((item, i) => {
+        gsap.fromTo(item, 
+            { opacity: 0, y: 50, scale: 0.9 },
+            {
+                opacity: 1,
+                y: 0,
+                scale: 1,
+                duration: 1,
+                ease: "power3.out",
+                scrollTrigger: {
+                    trigger: item,
+                    start: "top 80%",
+                    end: "bottom 60%",
+                    toggleActions: "play none none reverse"
+                }
+            }
+        );
+    });
+};
 
-gsap.to('.showcase-track', {
-    x: -translateX,
-    ease: 'none',
-    scrollTrigger: {
-        trigger: '.showcase',
-        start: 'top top',
-        end: `+=${translateX}`,
-        pin: true,
-        scrub: 1,
-        anticipatePin: 1,
-        onUpdate: (self) => {
-            gsap.to('.progress-bar-fill', {
-                width: `${self.progress * 100}%`,
-                duration: 0.1
-            });
-        }
-    }
-});
+showcaseMotion();
 
-// Smoother parallax effect on hero shapes with debouncing
+// Parallax effect for shapes on mouse move
 let timeout;
 document.addEventListener('mousemove', (e) => {
-    if (timeout) {
-        window.cancelAnimationFrame(timeout);
-    }
-
+    if (timeout) window.cancelAnimationFrame(timeout);
     timeout = window.requestAnimationFrame(() => {
         const shapes = document.querySelectorAll('.shape');
         const x = (window.innerWidth - e.pageX) / 100;
@@ -191,46 +80,86 @@ document.addEventListener('mousemove', (e) => {
     });
 });
 
-// Register ScrollTrigger
-gsap.registerPlugin(ScrollTrigger);
-
-// Animate each line of text
-gsap.utils.toArray('.large-text').forEach((text, i) => {
-    gsap.to(text, {
-        scrollTrigger: {
-            trigger: text,
-            start: "top bottom-=100",
-            end: "bottom center",
-            scrub: 1,
-        },
-        opacity: 1,
-        y: 0,
-        duration: 1.5,
-        ease: "power3.out",
-        stagger: {
-            amount: 0.3
-        }
+// Large text animation
+const animateLargeText = () => {
+    // Animate regular large text elements (excluding email)
+    gsap.utils.toArray('.large-text:not(.email)').forEach((text) => {
+        gsap.to(text, {
+            scrollTrigger: {
+                trigger: text,
+                start: "top bottom-=100",
+                end: "bottom center",
+                scrub: 1,
+            },
+            opacity: 1,
+            y: 0,
+            duration: 1.5,
+            ease: "power3.out",
+            stagger: { amount: 0.3 }
+        });
     });
-});
 
-// Register ScrollTrigger
-gsap.registerPlugin(ScrollTrigger);
+    // Separate animation for email
+    const emailElement = document.querySelector('.email');
+    if (emailElement) {
+        gsap.fromTo(emailElement,
+            { opacity: 0, y: 50 },
+            {
+                scrollTrigger: {
+                    trigger: emailElement,
+                    start: "top bottom",
+                    toggleActions: "play none none none",
+                },
+                opacity: 1,
+                y: 0,
+                duration: 1,
+                ease: "power2.out"
+            }
+        );
+    }
+};
 
-// Animate each line of text
-gsap.utils.toArray('.large-text').forEach((text, i) => {
-    gsap.to(text, {
-        scrollTrigger: {
-            trigger: text,
-            start: "top bottom-=100",
-            end: "bottom center",
-            scrub: 1,
-        },
-        opacity: 1,
-        y: 0,
-        duration: 1.5,
-        ease: "power3.out",
-        stagger: {
-            amount: 0.3
-        }
+animateLargeText();
+
+// Cursor
+// Only initialize cursor effect on desktop
+if (window.innerWidth >= 1024) {
+    const cursor = document.querySelector('.cursor');
+    let mouseX = 0;
+    let mouseY = 0;
+
+    // Update cursor position
+    document.addEventListener('mousemove', (e) => {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+
+        // Main cursor follows mouse immediately
+        gsap.to(cursor, {
+            x: mouseX - cursor.offsetWidth / 2,
+            y: mouseY - cursor.offsetHeight / 2,
+            duration: 0.1,
+            ease: "none"
+        });
     });
-});
+
+    // Add hover effect on cursor for interactive elements
+    const interactiveElements = document.querySelectorAll('a, button, .showcase-item');
+    
+    interactiveElements.forEach(el => {
+        el.addEventListener('mouseenter', () => {
+            gsap.to(cursor, {
+                scale: 1.5,
+                duration: 0.3,
+                backgroundColor: '#ffffff'
+            });
+        });
+
+        el.addEventListener('mouseleave', () => {
+            gsap.to(cursor, {
+                scale: 1,
+                duration: 0.3,
+                backgroundColor: '#ffff00'
+            });
+        });
+    });
+}

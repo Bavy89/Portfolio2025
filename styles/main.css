@@ -10,7 +10,9 @@ body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
     line-height: 1.6;
     overflow-x: hidden;
+
 }
+
 
 /* For most browsers */
 ::selection {
@@ -80,29 +82,31 @@ body {
     background: #ffcd00;
 }
 
-/* Horizontal Showcase Section */
+/* Showcase Section */
 .showcase {
-    height: 100vh;
-    overflow: hidden;
+    padding: 4rem 0;
+    background: #151515;
     position: relative;
+    overflow: hidden;
 }
 
 .showcase-track {
     display: flex;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+    flex-direction: column;
     gap: 2rem;
     padding: 0 2rem;
 }
 
 .showcase-item {
-    min-width: 800px;
+    width: 100%;
+    max-width: 1000px; /* Max width for larger screens */
+    margin: 0 auto;
     height: 500px;
-    background: #151515;
+    background: #1a1a1a;
     border-radius: 20px;
     position: relative;
     overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
 .showcase-item img {
@@ -119,7 +123,7 @@ body {
     left: 0;
     right: 0;
     padding: 2rem;
-    background: linear-gradient(transparent, rgba(0,0,0,0.9));
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.9));
     transform: translateY(100%);
     transition: transform 0.3s ease;
 }
@@ -132,54 +136,29 @@ body {
     opacity: 1;
 }
 
-/* Projects Section */
-.projects {
-    padding: 8rem 0;
+/* Responsive design */
+@media screen and (max-width: 768px) {
+    .showcase-item {
+        height: 400px;
+    }
 }
 
-.section-title {
-    font-size: 2.5rem;
-    margin-bottom: 4rem;
-    text-align: center;
-    color: #ffcd00;
-}
+@media screen and (max-width: 480px) {
+    .showcase-item {
+        height: 300px;
+    }
 
-.project-card {
-    background: #151515;
-    border-radius: 12px;
-    overflow: hidden;
-    position: relative;
-    border: 1px solid #ffcd00;
-}
+    .showcase-content {
+        padding: 1rem;
+    }
 
-.project-content {
-    padding: 1.5rem;
-}
+    .showcase-item h3 {
+        font-size: 1.5rem;
+    }
 
-.tech-tag {
-    padding: 0.25rem 0.75rem;
-    background: #ffcd00;
-    color: #0a0a0a;
-    border-radius: 100px;
-    font-size: 0.875rem;
-    font-weight: 600;
-}
-
-/* Progress bar */
-.progress-bar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 4px;
-    background: #151515;
-    z-index: 1000;
-}
-
-.progress-bar-fill {
-    height: 100%;
-    width: 0;
-    background: #ffcd00;
+    .showcase-item p {
+        font-size: 1rem;
+    }
 }
 
 
@@ -225,4 +204,103 @@ body {
 .email {
     color: #0066ff;
     text-decoration: underline;
+}
+
+/* modified cursor */
+
+@media (min-width: 1024px) {
+    body {
+        cursor: none;
+    }
+    
+    .cursor {
+        width: 20px;
+        height: 20px;
+        background: yellow;
+        border-radius: 50%;
+        position: fixed;
+        pointer-events: none;
+        z-index: 999;
+        mix-blend-mode: difference;
+    }
+
+    .cursor-trail {
+        width: 8px;
+        height: 8px;
+        background: rgba(255, 255, 0, 0.6);
+        border-radius: 50%;
+        position: fixed;
+        pointer-events: none;
+        z-index: 998;
+        mix-blend-mode: difference;
+    }
+}
+
+/* Hide cursor elements on mobile and tablet */
+@media (max-width: 1023px) {
+    .cursor, .cursor-trail {
+        display: none;
+    }
+}
+
+/* Add to your main.css */
+.tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.tech-badge {
+    padding: 0.35rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.025em;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+.tech-badge:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-1px);
+}
+
+/*  technology colors  */
+.tech-badge[data-tech="react"] {
+    background: rgba(97, 218, 251, 0.2);
+    border-color: rgba(97, 218, 251, 0.4);
+}
+
+.tech-badge[data-tech="vite"] {
+    background: rgba(146, 95, 242, 0.2);
+    border-color: rgba(146, 95, 242, 0.4);
+}
+
+.tech-badge[data-tech="html"] {
+    background: rgba(227, 79, 38, 0.2);
+    border-color: rgba(227, 79, 38, 0.4);
+}
+
+.tech-badge[data-tech="css"] {
+    background: rgba(41, 101, 241, 0.2);
+    border-color: rgba(41, 101, 241, 0.4);
+}
+
+.tech-badge[data-tech="javascript"] {
+    background: rgba(247, 223, 30, 0.2);
+    border-color: rgba(247, 223, 30, 0.4);
+}
+
+.tech-badge[data-tech="scss"] {
+    background: rgba(204, 102, 153, 0.2);
+    border-color: rgba(204, 102, 153, 0.4);
+}
+
+.tech-badge[data-tech="tailwind"] {
+    background: rgba(56, 189, 248, 0.2);
+    border-color: rgba(56, 189, 248, 0.4);
 }

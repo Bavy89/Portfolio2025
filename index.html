@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bave Ado portfolio</title>
+    <title>Bave Ado Portfolio</title>
     <!-- GSAP Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
@@ -11,34 +11,44 @@
     <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
-    <div class="progress-bar">
+    <div class="cursor"></div>
+
+
+    <!-- Progress Bar -->
+    <section class="progress-bar">
         <div class="progress-bar-fill"></div>
-    </div>
+    </section>
 
     <!-- Hero Section -->
-    <section class="hero">
+    <header class="hero">
         <div class="container hero-content">
             <h1 class="hero-title">
                 Portfolio
-                <br>
                 <span class="highlight">Bave Ado</span>
             </h1>
             <p class="hero-subtitle">Building modern web experiences with passion</p>
-                </div>
-    </section>
+        </div>
+    </header>
 
     <!-- Horizontal Showcase -->
     <section class="showcase">
         <div class="showcase-track">
-
             <div class="showcase-item">
                 <img src="/images/Holidaze.png" alt="hotel website">
                 <div class="showcase-content">
                     <h3>Hotel website</h3>
                     <p>Hotels booking website</p>
+                    <div class="tech-stack">
+                        <span class="tech-badge" data-tech="react">React</span>
+                        <span class="tech-badge" data-tech="html">HTML</span>
+                        <span class="tech-badge" data-tech="css">CSS</span>
+                        <span class="tech-badge" data-tech="vite">Vite</span>
+                        <span class="tech-badge" data-tech="tailwind">Tailwind</span>
+                        <span class="tech-badge" data-tech="javascript">JavaScript</span>
+                    </div>
                 </div>
             </div>
-
+    
             <div class="showcase-item">
                 <img src="/images/auction.png" alt="Auction website">
                 <div class="showcase-content">
@@ -46,13 +56,15 @@
                     <p>Modern shopping experience with seamless checkout</p>
                 </div>
             </div>
+    
             <div class="showcase-item">
                 <img src="/images/trefelling.png" alt="trefelling">
                 <div class="showcase-content">
-                    <h3>carpenter Website</h3>
+                    <h3>Carpenter Website</h3>
                     <p>Trefelling</p>
                 </div>
             </div>
+    
             <div class="showcase-item">
                 <img src="/images/restaurant.png" alt="Restaurant website">
                 <div class="showcase-content">
@@ -60,6 +72,7 @@
                     <p>Modern restaurant</p>
                 </div>
             </div>
+    
             <div class="showcase-item">
                 <img src="/images/AlbanianSoccer.png" alt="Soccer website">
                 <div class="showcase-content">
@@ -69,22 +82,25 @@
             </div>
         </div>
     </section>
+    
 
 
+    <!-- Footer Section -->
     <footer class="footer">
         <div class="container">
-            <div class="large-text-container">
-                <div class="large-text">LET'S CREATE</div>
-                <div class="large-text">SOMETHING</div>
-                <div class="large-text">TOGETHER.</div>
-                <div class="contact-details">
+            <section class="large-text-container">
+                <h2 class="large-text">LET'S CREATE</h2>
+                <h2 class="large-text">SOMETHING</h2>
+                <h2 class="large-text">TOGETHER.</h2>
+                <address class="contact-details">
                     <div class="large-text contact">Bave Ado</div>
-                    <div class="large-text email">bave.ado@gmail.com</div>
-                </div>
-            </div>
+                    <div class="large-text email">
+                        <a href="mailto:bave.ado@gmail.com">bave.ado@gmail.com</a>
+                    </div>
+                </address>
+            </section>
         </div>
     </footer>
-
 
     <!-- Custom Scripts -->
     <script src="scripts/main.js"></script>
