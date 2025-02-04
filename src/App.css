@@ -1,0 +1,38 @@
+/* Smooth scrolling for the entire site */
+html {
+    scroll-behavior: smooth;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+
+  }
+  
+  /* Smoother animations for everything */
+  * {
+    transition: all 0.2s ease-out;
+  }
+
+
+
+/* Add this to your existing App.css */
+::selection {
+    background: #333333; /* Dark background when selecting */
+    color: #ffffff; /* White text when selecting */
+  }
+  
+  ::-moz-selection {
+    background: #333333;
+    color: #ffffff;
+  }
+  
+  /*  Bave text  */
+  .text-blue-600::selection {
+    background: #2563eb; /* Blue background when selecting */
+    color: #ffffff;
+  }
+  
+  .text-blue-600::-moz-selection {
+    background: #2563eb;
+    color: #ffffff;
+  }
+
+
+  

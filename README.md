@@ -1,40 +1,40 @@
+# <div align="center">React js Quick Start Pack 😊</div>
 
-# Welcome to my portfolio!
+<div align="center">
+  
+  [![portfolio](https://img.shields.io/badge/my_portfolio-FFFF00?style=for-the-badge&logo=ko-fi&logoColor=black)](https://animated-portfolio-green-one.vercel.app/)     [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/tahmid-emam/)     [![twitter](https://img.shields.io/badge/twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://x.com/tahmid_emam)
+  
+</div>
 
-![image](https://avatars.githubusercontent.com/u/85221462?v=4)
+# _Features_ ⬇️
 
-Welcome to my portfolio! This is a showcase of my skills, experiences, and achievements in the field of Front End Developer. My portfolio is a representation of my hard work and dedication, highlighting the projects I have completed and the challenges I have overcome. This portfolio is a testament to my passion for Front End and my drive to constantly improve and grow as a professional. Whether you are a potential employer or just interested in learning more about me, I hope that you will find this portfolio informative and reflective of my abilities and character. Thank you for taking the time to review my work. 
+- ### The project follows a clear and organized folder structure to maintain code readability and scalability.
 
-I'd appreciate it if you could take a look at my portfolio website: [Portfolio](https://portfolio2bave.netlify.app/)
+- ### Includes necessary packages such as tailwind css, daisy ui, react-icons, React-router-dom, and others, reducing the setup time for new projects.
 
-# Portfolio Projects
-### Shop
-- **Live Site:** [Shop](https://baveadoshop.netlify.app/)
+# Getting Started
 
-### Holidaze
-- **Live Site:** [Holidaze](https://holidazebaveado.netlify.app/)
+### To get started with this quick start pack, follow these steps:
 
-### Auction
-- **Live Site:** [Auction](https://bave-auction.netlify.app/)
+## 1. Clone the Repository:
 
+```bash
+git clone https://github.com/tahmid0111/react-starter-pack.git
+```
+## 2. Install Dependencies:
 
-## Built With
-- React
-- Tailwind
-- Vite
-- Redux
-- HTML
-- CSS
-- Javascript
+```bash
+cd react-starter-pack
+npm install
+```
 
-## Contact
+## 5. Start the Server:
 
-Hi, if you need to reach me, feel free to drop me a message on any of these platforms:
+```bash
+npm run dev
+```
+## 6. Remove GitHub Link:
+- ### Delete the hidden folder named .git of this project and it will lost connection with my repository.
 
-- Email: bavy_ke@hotmail.com
-- LinkedIn: [Bavy Ado LinkedIn](https://linkedin.com/in/bavy-ado-877912114)
-
-
-## Tools
-
-- Visuals studio code
+## 7. Happy Coding:😊😊
+- ### You can now update the project name as per your need and start contributing in your own ways.
