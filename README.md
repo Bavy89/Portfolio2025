@@ -8,9 +8,6 @@ Welcome to my portfolio! This is a showcase of my skills, experiences, and achie
 I'd appreciate it if you could take a look at my portfolio website: [Portfolio](https://portfolio2bave.netlify.app/)
 
 # Portfolio Projects
-
-## Course Projects
-
 ### Shop
 - **Live Site:** [Shop](https://baveadoshop.netlify.app/)
 
