@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
-import DarkModeToggle from "./DarkModeToggle"; // Import the Dark Mode Toggle
+import DarkModeToggle from "./DarkModeToggle"; //Dark mode
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -49,7 +49,7 @@ const Navigation = () => {
                 {item.name}
               </motion.a>
             ))}
-            <DarkModeToggle /> {/* ✅ Animated Dark Mode Toggle */}
+            <DarkModeToggle /> {/* Animated Dark Mode Toggle */}
           </div>
 
           {/* Mobile Navigation Button */}
@@ -98,7 +98,7 @@ const Navigation = () => {
               </motion.a>
             ))}
             <div className="flex justify-center p-3">
-              <DarkModeToggle /> {/* ✅ Dark Mode Toggle in Mobile Menu */}
+              <DarkModeToggle /> {/* Dark Mode Toggle in Mobile Menu */}
             </div>
           </div>
         </motion.div>

@@ -5,7 +5,6 @@ const ScrollToTop = () => {
   const [scrollY, setScrollY] = useState(0);
   const [visible, setVisible] = useState(false);
 
-  // Handle scrolling
   useEffect(() => {
     const updateScroll = () => {
       setScrollY(window.scrollY);
@@ -16,12 +15,11 @@ const ScrollToTop = () => {
     return () => window.removeEventListener("scroll", updateScroll);
   }, []);
 
-  // Scroll to top function
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
-  // Calculate progress for circular indicator
+  // Calculate progress for indicator
   const scrollProgress = Math.min(100, (scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);
 
   return (

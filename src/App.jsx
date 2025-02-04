@@ -1,6 +1,6 @@
-import './App.css'
-import { motion, AnimatePresence } from 'framer-motion'
-import { Navigation, Hero, Projects, Contact } from './components'
+import "./App.css";
+import { motion, AnimatePresence } from "framer-motion";
+import { Navigation, Hero, Projects, Contact } from "./components";
 import ScrollToTop from "./components/ScrollToTop";
 
 function App() {

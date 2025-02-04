@@ -28,7 +28,10 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-20 bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
+    <section
+      id="contact"
+      className="py-20 bg-gray-50 dark:bg-gray-900 transition-colors duration-300"
+    >
       <div className="max-w-7xl mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -40,7 +43,8 @@ const Contact = () => {
             Get In Touch
           </h2>
           <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-            Have a project in mind? Let's discuss how we can work together to bring your ideas to life.
+            Have a project in mind? Let's discuss how we can work together to
+            bring your ideas to life.
           </p>
         </motion.div>
 
@@ -79,7 +83,10 @@ const Contact = () => {
               className="space-y-6 bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg transition-colors duration-300"
             >
               <div>
-                <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                <label
+                  htmlFor="name"
+                  className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
+                >
                   Name
                 </label>
                 <input
@@ -93,7 +100,10 @@ const Contact = () => {
               </div>
 
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                <label
+                  htmlFor="email"
+                  className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
+                >
                   Email
                 </label>
                 <input
@@ -107,7 +117,10 @@ const Contact = () => {
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                <label
+                  htmlFor="message"
+                  className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
+                >
                   Message
                 </label>
                 <textarea
