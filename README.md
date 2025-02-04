@@ -11,13 +11,13 @@ I'd appreciate it if you could take a look at my portfolio website: [Portfolio](
 
 ## Course Projects
 
-### Bave Ado Shop
+### Shop
 - **Live Site:** [Shop](https://baveadoshop.netlify.app/)
 
 ### Holidaze
 - **Live Site:** [Holidaze](https://holidazebaveado.netlify.app/)
 
-### Bave Auction
+### Auction
 - **Live Site:** [Auction](https://bave-auction.netlify.app/)
 
 
