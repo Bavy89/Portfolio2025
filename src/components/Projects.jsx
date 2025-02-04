@@ -7,16 +7,16 @@ const Projects = () => {
   const projects = [
     {
       title: "Shop website",
-      description: "A full-stack e-commerce platform built with React and Node.js",
-      tech: ["React", "HTML", "CSS", "JS"],
+      description: "A web shop website made with React",
+      tech: ["React", "HTML", "CSS", "JS", "Tailwind","vite","Redux"],
       image: shopImage,
       link: "https://github.com/Bavy89/CA-react-Bave-Ado/tree/main",
       website: "https://baveadoshop.netlify.app/",
     },
     {
       title: "Book Venues",
-      description: "A collaborative task management tool with real-time updates",
-      tech: ["React", "HTML", "CSS", "JS", "Tailwind"],
+      description: "Venue booking website made with React",
+      tech: ["React", "HTML", "CSS", "JS", "Tailwind","vite"],
       image: hotelImage,
       link: "https://github.com/Bavy89/Holidaze",
       website: "https://holidazebaveado.netlify.app/",
@@ -24,7 +24,7 @@ const Projects = () => {
     {
       title: "Auction Website",
       description: "A modern portfolio website with smooth animations",
-      tech: ["React", "HTML", "CSS", "JS"],
+      tech: ["SCSS", "HTML", "CSS", "JS", "Bootstrap"],
       image: auctionImage,
       link: "https://github.com/Bavy89/Semester-project-auction",
       website: "https://bave-auction.netlify.app/",
