@@ -39,8 +39,7 @@ Thank you for visiting, and I appreciate your time! 🙌
 
 If you'd like to connect or discuss potential opportunities, feel free to reach out:  
 
-📧 **Email:** bavy_ke@hotmail.com  
-💼 **LinkedIn:** [Bavy Ado LinkedIn](https://linkedin.com/in/bavy-ado-877912114)  
+📧 **Email:** bave.ado@gmail.com 
 
 ---
 
