@@ -11,20 +11,6 @@ I'd appreciate it if you could take a look at my portfolio website: [Portfolio](
 
 ## Course Projects
 
-### RainyDays (Cross-course Project)
-- **Live Site:** [RainyDays](https://elated-poitras-26e452.netlify.app/index.html)
-- **GitHub:** [Repository](https://github.com/Bavy89/HTML-CSS-CA-Assignment_Bavy-Rainydays.git)
-
-### Community Science Museum (Semester Project 1)  
-- **Live Site:** [Museum](https://trusting-borg-d28da2.netlify.app/)
-- **GitHub:** [Repository](https://github.com/Bavy89/Semester-project-1_Bavy-Ado.git)
-
-### Blog (Project Exam 1)
-- **Live Site:** [Blog](https://grand-horse-ca0eca.netlify.app/index.html) 
-- **GitHub:** [Repository](https://github.com/Bavy89/projectexamblog.git)
-
-## Recent Projects
-
 ### Bave Ado Shop
 - **Live Site:** [Shop](https://baveadoshop.netlify.app/)
 
@@ -33,6 +19,7 @@ I'd appreciate it if you could take a look at my portfolio website: [Portfolio](
 
 ### Bave Auction
 - **Live Site:** [Auction](https://bave-auction.netlify.app/)
+
 
 ## Built With
 
