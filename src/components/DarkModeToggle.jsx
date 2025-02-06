@@ -3,20 +3,20 @@ import { motion } from "framer-motion";
 import { MoonIcon, SunIcon } from "@heroicons/react/24/solid";
 
 const DarkModeToggle = () => {
-  // Get initial theme from localStorage or default to "light"
+  
   const storedTheme = localStorage.getItem("theme") || "light";
   const [darkMode, setDarkMode] = useState(storedTheme === "dark");
 
   useEffect(() => {
-    const root = document.documentElement; // Access <html>
+    const root = document.documentElement; 
     
     if (darkMode) {
-      root.setAttribute("data-theme", "dark"); // ✅ Updates data-theme attribute
-      root.classList.add("dark"); // ✅ Adds Tailwind's dark mode class
+      root.setAttribute("data-theme", "dark"); 
+      root.classList.add("dark"); 
       localStorage.setItem("theme", "dark");
     } else {
-      root.setAttribute("data-theme", "light"); // ✅ Updates data-theme
-      root.classList.remove("dark"); // ✅ Removes Tailwind's dark mode class
+      root.setAttribute("data-theme", "light");
+      root.classList.remove("dark"); 
       localStorage.setItem("theme", "light");
     }
   }, [darkMode]);
