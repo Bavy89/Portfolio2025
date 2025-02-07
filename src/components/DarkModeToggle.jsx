@@ -15,7 +15,7 @@ const DarkModeToggle = () => {
       root.classList.add("dark"); 
       localStorage.setItem("theme", "dark");
     } else {
-      root.setAttribute("data-theme", "light");
+      root.setAttribute("data-theme", "light"); 
       root.classList.remove("dark"); 
       localStorage.setItem("theme", "light");
     }

@@ -1,52 +1,40 @@
-# 🚀 Welcome to My Portfolio!  
 
-![Profile Image](https://avatars.githubusercontent.com/u/85221462?v=4)  
+# Welcome to my portfolio!
 
-Welcome to my portfolio! This serves as a showcase of my **skills, experiences, and achievements** as a **Front-End Developer**. It reflects my **dedication, creativity, and problem-solving ability** through the projects I've built and the challenges I've tackled.  
+![image](https://avatars.githubusercontent.com/u/85221462?v=4)
 
-This portfolio is a testament to my **passion for front-end development** and my commitment to **continuous learning and growth**. Whether you're a **potential employer, collaborator, or just exploring**, I hope you find my work insightful and representative of my abilities.  
+Welcome to my portfolio! This is a showcase of my skills, experiences, and achievements in the field of Front End Developer. My portfolio is a representation of my hard work and dedication, highlighting the projects I have completed and the challenges I have overcome. This portfolio is a testament to my passion for Front End and my drive to constantly improve and grow as a professional. Whether you are a potential employer or just interested in learning more about me, I hope that you will find this portfolio informative and reflective of my abilities and character. Thank you for taking the time to review my work. 
 
-Thank you for visiting, and I appreciate your time! 🙌  
+I'd appreciate it if you could take a look at my portfolio website: [Portfolio](https://portfolio2bave.netlify.app/)
 
-🔗 **Check out my portfolio website:** [Portfolio](https://portfolio2bave.netlify.app/)  
+# Portfolio Projects
+### Shop
+- **Live Site:** [Shop](https://baveadoshop.netlify.app/)
 
----
+### Holidaze
+- **Live Site:** [Holidaze](https://holidazebaveado.netlify.app/)
 
-## 🌟 Portfolio Projects  
+### Auction
+- **Live Site:** [Auction](https://bave-auction.netlify.app/)
 
-### 🛒 Shop  
-- **Live Demo:** [Shop](https://baveadoshop.netlify.app/)  
 
-### 🏨 Holidaze  
-- **Live Demo:** [Holidaze](https://holidazebaveado.netlify.app/)  
+## Built With
+- React
+- Tailwind
+- Vite
+- Redux
+- HTML
+- CSS
+- Javascript
 
-### 🔨 Auction  
-- **Live Demo:** [Auction](https://bave-auction.netlify.app/)  
+## Contact
 
----
+Hi, if you need to reach me, feel free to drop me a message on any of these platforms:
 
-## 🛠 Built With  
+- Email: bavy_ke@hotmail.com
+- LinkedIn: [Bavy Ado LinkedIn](https://linkedin.com/in/bavy-ado-877912114)
 
-- **React**  
-- **Tailwind CSS**  
-- **Vite**  
-- **Redux**  
-- **HTML, CSS, JavaScript**  
 
----
+## Tools
 
-## 📬 Contact Me  
-
-If you'd like to connect or discuss potential opportunities, feel free to reach out:  
-
-📧 **Email:** bave.ado@gmail.com 
-
----
-
-## 🛠 Tools  
-
-- **Visual Studio Code**  
-
----
-
-### Thank you for checking out my portfolio! 🚀  
+- Visuals studio code
