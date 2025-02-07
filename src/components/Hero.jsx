@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from "framer-motion";
+import baveImage from '../assets/images/bave.jpg';
 
 const Hero = () => {
   return (
@@ -15,7 +16,7 @@ const Hero = () => {
           >
             <div className="relative w-64 h-64 md:w-80 md:h-80">
               <img
-                src="../src/assets/images/bave.jpg"
+                src={baveImage}
                 alt="Profile"
                 className="rounded-full w-full h-full object-cover shadow-xl"
               />
@@ -132,7 +133,7 @@ const Hero = () => {
               transition={{ delay: 0.7 }}
             >
               <motion.a
-                href="/files/bave-resume.pdf"
+                href={`${import.meta.env.BASE_URL}assets/files/resume.pdf`}
                 download
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
