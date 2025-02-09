@@ -4,19 +4,8 @@ import { useState, useEffect } from "react";
 const MouseGlow = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [isDarkMode, setIsDarkMode] = useState(false);
-  const [isDesktop, setIsDesktop] = useState(false);
 
   useEffect(() => {
-    // Check if device has hover capability (desktop)
-    const mediaQuery = window.matchMedia('(hover: hover)');
-    setIsDesktop(mediaQuery.matches);
-
-    const handleDeviceChange = (e) => {
-      setIsDesktop(e.matches);
-    };
-
-    mediaQuery.addEventListener('change', handleDeviceChange);
-
     const handleMouseMove = (e) => {
       setMousePosition({
         x: e.clientX,
@@ -53,16 +42,15 @@ const MouseGlow = () => {
     return () => {
       window.removeEventListener("mousemove", handleMouseMove);
       observer.disconnect();
-      mediaQuery.removeEventListener('change', handleDeviceChange);
     };
   }, []);
 
-  // Only render if both dark mode is enabled and we're on desktop
-  if (!isDarkMode || !isDesktop) return null;
+  if (!isDarkMode) return null;
 
   return (
     <motion.div
-      className="pointer-events-none fixed top-0 left-0 w-full h-full z-50"
+      // Hide on mobile/tablet using Tailwind's responsive classes
+      className="pointer-events-none fixed top-0 left-0 w-full h-full z-50 hidden md:block"
       style={{ position: 'fixed' }}
     >
       <motion.div
