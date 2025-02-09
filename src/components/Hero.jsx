@@ -4,21 +4,21 @@ import baveImage from '../assets/images/bave.jpg';
 
 const Hero = () => {
   return (
-    <section className="min-h-screen flex items-center justify-center bg-gray-50 dark:bg-gray-900 px-4 transition-colors duration-300">
-      <div className="max-w-6xl mx-auto py-20">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+    <section className="min-h-screen flex items-center justify-center bg-gray-50 dark:bg-gray-900 px-4 transition-colors duration-300 relative overflow-hidden">
+      <div className="max-w-6xl mx-auto py-8 md:py-20">
+        <div className="grid md:grid-cols-2 gap-12 items-start">
           {/* Image Column */}
           <motion.div
             initial={{ opacity: 0, scale: 0.5 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5 }}
-            className="flex justify-center md:justify-end"
+            className="flex justify-center md:justify-end pt-16 md:pt-32 relative"
           >
             <div className="relative w-64 h-64 md:w-80 md:h-80">
               <img
                 src={baveImage}
                 alt="Profile"
-                className="rounded-full w-full h-full object-cover shadow-xl"
+                className="rounded-full w-full h-full object-cover shadow-xl relative"
               />
             </div>
           </motion.div>
@@ -28,7 +28,7 @@ const Hero = () => {
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
-            className="text-left"
+            className="text-left flex flex-col relative"
           >
             <motion.h1
               className="text-6xl md:text-7xl font-bold text-gray-900 dark:text-white mb-4"
