@@ -23,7 +23,7 @@ const Projects = () => {
     },
     {
       title: "Auction Website",
-      description: "A modern portfolio website with smooth animations",
+      description: "A modern auction wesbite",
       tech: ["SCSS", "HTML", "CSS", "JS", "Bootstrap"],
       image: auctionImage,
       link: "https://github.com/Bavy89/Semester-project-auction",
