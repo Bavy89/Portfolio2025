@@ -79,6 +79,15 @@ const Hero = () => {
               </div>
             </motion.div>
 
+<motion.h2
+  className="text-2xl font-semibold text-gray-900 dark:text-white mt-8 mb-4"
+  initial={{ opacity: 0, y: 20 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ delay: 0.5 }}
+>
+  Skills
+</motion.h2>
+            
             {/* Skills */}
             <motion.div
               className="flex flex-wrap gap-3"
