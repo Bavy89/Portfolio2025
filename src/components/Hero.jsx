@@ -142,7 +142,7 @@ const Hero = () => {
               transition={{ delay: 0.7 }}
             >
               <motion.a
-                href={`${import.meta.env.BASE_URL}assets/files/resume.pdf`}
+                href={`${import.meta.env.BASE_URL}assets/files/BaveCV.pdf`}
                 download
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
