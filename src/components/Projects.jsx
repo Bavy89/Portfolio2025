@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import auctionImage from "../assets/images/auction.png";
 import hotelImage from "../assets/images/hotel.png";
 import shopImage from "../assets/images/shop.png";
-import albanianImage from "../assets/images/albanianSoccer.png";
+import albanianImage from "../assets/images/AlbanianSoccer.png";
 import restaurantImage from "../assets/images/restaurant.png";
 import fkTrefellingImage from "../assets/images/trefelling.png";
 
